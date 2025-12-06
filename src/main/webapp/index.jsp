@@ -8,7 +8,7 @@
             margin: 0;
             padding: 0;
             font-family: "Segoe UI", Arial, sans-serif;
-            background: linear-gradient(135deg, black, blue);
+            background: linear-gradient(135deg, Red, blue);
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -48,7 +48,7 @@
 <body>
     <div class="container">
         <h1>Welcome to DevOps</h1>
-        <div class="author">- Satish Karengula</div>
+        <div class="author">- Meena</div>
     </div>
 </body>
 </html>
