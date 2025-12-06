@@ -6,7 +6,7 @@ pipeline {
         branch "develop"
       }
       steps {
-        echo "Build happens here devlop"
+        echo "Build happens here develop"
       }
     }
     stage ("Deploy-Dev"){
