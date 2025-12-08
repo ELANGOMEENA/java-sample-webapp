@@ -1,3 +1,4 @@
-def call(artifact_name) {
-   sshPublisher(publishers: [sshPublisherDesc(configName: 'tomcat', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: 'target', sourceFiles: 'target/${artifact_name}.war')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+def call(servername,artifact_name){
+ sshPublisher(publishers: [sshPublisherDesc(configName: "${servername}", transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '''/opt/tomcat/bin/shutdown.sh
+/opt/tomcat/bin/startup.sh''', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: 'target', sourceFiles: 'target/${artifact_name}.war')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)]) 
 }
